@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario Chivisima</title>
+    <link rel="stylesheet" href="css/styles.css">
+	<script src="js/formulario.js"></script>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+   <form id="formulario" onsubmit="return registrarProducto()">
+		<label>Nombre: </label>
+		<input type="text" required id="nombre">
+		<br>
+		<br>
+		<label>Categoria: </label>
+		<input type="text" required id="categoria">		
+		<br>
+		<br>
+		<label>Precio: </label>
+		<input type="text" required id="precio">		
+		<br>
+		<br>
+		<label>Marca: </label>
+		<input type="text" required id="marca">		
+		<br>
+		<br>
+		<label>Descripcion: </label>
+		<input type="text" required id="descripcion">		
+		<br>
+		<br>
+		<label>Imagen: </label>
+		<input type="text" required id="imagen">		
+		<br>
+		<br>
+		<input type="submit" value="Registrar">
+	
+   </form>
+   <button onclick="guardarProductos()">Guardar Productos</button>
+   <a href="verProductos.html">Ver productos</a>
+   
+</body>
+</html>
