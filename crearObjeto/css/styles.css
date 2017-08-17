@@ -1,0 +1,18 @@
+#productoContainer{
+    margin: 50px;
+
+}
+#imagen {
+    height: 120px;
+    width: 120px;
+    float: right;
+    margin-right: 25px;
+    margin-top: -80px;
+}
+#descripcion{
+    text-align: justify;
+    width: 80%;
+}
+#titulo{
+    margin-bottom: 40px;
+}

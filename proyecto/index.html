@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+         <title>Proyecto</title>
+         <link rel="shortcut icon" type="image/x-icon" href="http://www.upi.ac.cr/wp-content/uploads/favicon.jpg" />
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/usuario_controller.js"></script>
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+    </head>
+
+<body>
+    <form id="login" onsubmit="return login()">
+        <label>Usuario</label><input type="text" id="usuario" required>
+        <br>
+        <br>
+        <label>Password</label><input type="password" id="pass" required>
+        <br>
+        <br>
+        <input type="submit" value="Login">
+    </form>
+    <p id="mensaje"></p>
+</body>
+
+</html>
