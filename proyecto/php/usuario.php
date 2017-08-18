@@ -1,5 +1,5 @@
 <?php
-$servername = "127.0.0.1";
+$servername = "172.16.11.129";
 $username = "root";
 $password = "";
 $dbname = "test";
@@ -14,7 +14,16 @@ if($_POST["metodo"] == "select"){
     } else {
         echo "Error";
     }
-}else if($_POST["metodo"] == "selectAll"){
+}else if($_POST["metodo"] == "selectId"){
+    $sql = "select * from usuarios where idusuarios='".$_POST["idusuario"]."'";
+      $result = $conn->query($sql);
+      if ($result->num_rows > 0 ) {	
+          $user = mysqli_fetch_assoc($result);
+          echo json_encode($user);
+      } else {
+          echo "Error";
+      }
+  }else if($_POST["metodo"] == "selectAll"){
     $users = array();
     $sql = "select * from usuarios";
     $result = $conn->query($sql);
@@ -22,7 +31,6 @@ if($_POST["metodo"] == "select"){
         while($row = mysqli_fetch_assoc($result)) { 
             array_push($users, $row); 
         } 	
-       
         echo json_encode($users);
     } else {
         echo "Error";
@@ -39,7 +47,17 @@ if($_POST["metodo"] == "select"){
         $_POST["pass"]."','".
         $_POST["genero"]."','".
         $_POST["rol"]."')";
-    }
+    }else if($_POST["metodo"] == "update"){
+        $sql = "update usuarios set nombre = '".$_POST["nombre"].
+        "',apellidos = '".$_POST["apellidos"].
+        "',provincia = '".$_POST["provincia"].
+        "',telefono = '".$_POST["telefono"].
+        "',correo = '".$_POST["correo"].
+        "',username = '".$_POST["username"].
+        "',password = '".$_POST["pass"].
+        "',genero = '".$_POST["genero"].
+        "' where idusuarios = ".$_POST["idusuarios"];
+     }
 
    if ($conn->query($sql) === TRUE ) {
          echo "Exito";

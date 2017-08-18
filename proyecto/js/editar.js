@@ -3,7 +3,8 @@ window.onload = function(){
     if(usuarioLogueado){
         usuarioLogueado = JSON.parse(usuarioLogueado);
         if(usuarioLogueado.rol == "0"){
-            listarUsuarios();
+            var idusuario = window.location.search.replace("?", "");
+            traerUsuario(idusuario);
         }else{
             alert("Usted no es administrador");
         }

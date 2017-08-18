@@ -9,13 +9,13 @@
         <script src="js/jquery-3.1.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/usuario_controller.js"></script>
-        <script src="js/principal.js"></script>
+        <script src="js/editar.js"></script>
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/bootstrap.css">
     </head>
 
 <body>
-    <form id="registro" onsubmit="return registrar()" class="form">
+    <form id="editar" onsubmit="return editar()" class="form">
         <label>Nombre</label><input type="text" id="nombre" required>
         <br>
         <br>
@@ -52,7 +52,8 @@
         <input type="radio" id="nr" name="gen" value="No Responde" required>No responde
         <br>
         <br>
-        <input type="submit" value="Registrar">
+        <input type="hidden" id="idusuario">
+        <input type="submit" value="Editar">
     </form>
     <p id="mensaje"></p>
 </body>
