@@ -1,0 +1,19 @@
+Cree una estructura basica de HTML con jquery
+Cree un div de 60px por 60px de color negro
+cree un boton debajo del cuadro
+Cree un UL con 6 LI con texto cualquiera
+Cree un boton debajo del UL
+cree dos inputs
+cree un boton debajo de los inputs
+Cree un div de 60px por 60px color negro
+
+Ejercicios
+1. Cree una funcion que cambie aleatoriamente el primer cuadro negro de color entre 
+rojo, azul, verde, amarillo, morado, cafe, celeste, anaranjado y gris
+
+2. Cree una funcion que cambie los LI que estan en posicion par a rojo y
+los que estan en posicion impar a azul
+
+3. Cree una funcion que sume los valores ingresados en los inputs.
+Si el resultado es par, el cuadro cambia a color verde, si el resultado es
+impar, el cuadro cambia a color amarillo.
