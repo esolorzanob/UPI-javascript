@@ -70,43 +70,12 @@ function listarUsuarios() {
             alert("An error occured: " + xhr.status + " " + xhr.statusText);
         },
         success: function (usuario_response) {
-            console.log(usuario_response)
           var usuarios = JSON.parse(usuario_response);
-          usuarios.map(function(usuario){
-              
-            var fila = document.createElement("tr");
-            var nombre = document.createElement("td");
-            $(nombre).text(usuario.nombre);
-            $(fila).append(nombre);
-            var apellidos = document.createElement("td");
-            $(apellidos).text(usuario.apellidos);
-            $(fila).append(apellidos);
-            var telfono = document.createElement("td");
-            $(telfono).text(usuario.telefono);
-            $(fila).append(telfono);
-            var correo = document.createElement("td");
-            $(correo).text(usuario.correo);
-            $(fila).append(correo);
-            var genero = document.createElement("td");
-            $(genero).text(usuario.genero);
-            $(fila).append(genero);
-            var provincia = document.createElement("td");
-            $(provincia).text(usuario.provincia);
-            $(fila).append(provincia);
-            var editar = document.createElement("td");
-            $(editar).addClass("centrado");
-            $(editar).html("<a href=\"editar.html?"+usuario.idusuarios+"\"><i class=\"fa fa-lg fa-pencil-square-o verde\" aria-hidden=\"true\"></i></a>");
-            $(fila).append(editar);
-            var borrar = document.createElement("td");
-            $(borrar).addClass("centrado");
-            $(borrar).html("<i class=\"fa fa-lg fa-trash-o rojo\" aria-hidden=\"true\"></i>");
-            $(fila).append(borrar);
-            $('#tabla').append(fila);
-          });
-           
+          crearTabla(usuarios);
+          sessionStorage.setItem("usuarios", usuario_response);
         }
     });
-
+    
     return false;
 }
 
@@ -170,4 +139,37 @@ function editar() {
     });
 
     return false;
+}
+
+function crearTabla(usuarios){
+    usuarios.map(function(usuario){
+        var fila = document.createElement("tr");
+        var nombre = document.createElement("td");
+        $(nombre).text(usuario.nombre);
+        $(fila).append(nombre);
+        var apellidos = document.createElement("td");
+        $(apellidos).text(usuario.apellidos);
+        $(fila).append(apellidos);
+        var telfono = document.createElement("td");
+        $(telfono).text(usuario.telefono);
+        $(fila).append(telfono);
+        var correo = document.createElement("td");
+        $(correo).text(usuario.correo);
+        $(fila).append(correo);
+        var genero = document.createElement("td");
+        $(genero).text(usuario.genero);
+        $(fila).append(genero);
+        var provincia = document.createElement("td");
+        $(provincia).text(usuario.provincia);
+        $(fila).append(provincia);
+        var editar = document.createElement("td");
+        $(editar).addClass("centrado");
+        $(editar).html("<a href=\"editar.html?"+usuario.idusuarios+"\"><i class=\"fa fa-lg fa-pencil-square-o verde\" aria-hidden=\"true\"></i></a>");
+        $(fila).append(editar);
+        var borrar = document.createElement("td");
+        $(borrar).addClass("centrado");
+        $(borrar).html("<i class=\"fa fa-lg fa-trash-o rojo\" aria-hidden=\"true\"></i>");
+        $(fila).append(borrar);
+        $('#tabla').append(fila);
+      });
 }

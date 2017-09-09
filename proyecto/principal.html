@@ -16,8 +16,22 @@
 
 <body>
     <div id="tableContainer" class="container">
+        <h3>Filtros</h3>
+        <label>Provincia</label>
+        <select id="provincia">
+            <option value="Todas">Todas</option>
+            <option value="San Jose">San Jose</option>
+            <option value="Limon">Limon</option>
+            <option value="Alajuela">Alajuela</option>
+            <option value="Cartago">Cartago</option>
+            <option value="Heredia">Heredia</option>
+            <option value="Guanacaste">Guanacaste</option>
+            <option value="Puntarenas">Puntarenas</option>
+        </select>
+        <br>
+        <button class="btn btn-primary"onclick="filtrar()">Filtrar</button>
         <table class="table table-hover table-striped table-responsive table-bordered" id="tabla">
-            <tr>
+            <tr class="titulos">
                 <th>
                     Nombre
                 </th>
