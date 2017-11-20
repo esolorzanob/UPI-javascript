@@ -1,0 +1,39 @@
+.izquierda {
+    float: left;
+}
+
+.derecha{
+    float: right;
+    margin-right: 20px;
+}
+
+.azul {
+    background-color: blue;
+}
+
+.verde {
+    background-color: green;
+}
+
+.amarillo{
+    background-color: yellow;
+}
+.morado{
+    background-color: purple;
+}
+.anaranjado{
+    background-color: orange;
+}
+.negro{
+    background-color: black;
+}
+.magenta{
+    background-color: magenta;
+}
+.cyan{
+    background-color: cyan;
+}
+#cuadro{
+    height: 300px;
+    width: 300px;
+}

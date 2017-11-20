@@ -3,21 +3,40 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>API AJAX</title>
+    <title>JQuery</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="js/usuario_controller.js"></script>
+    <script src="js/crearObjeto.js"></script>
 </head>
 
 <body>
-    <img src="imgs/pokemon_list.jpg" id="pokemones">
-    <div id="principal">
-        <h1>Mundo Pokemon</h1>
-        <p>Digite el numero del pokemon que quiere investigar</p>
-        <form id="formulario" onsubmit="return buscarPokemon()">
-            <input type="text" id="numero" required>
-            <input type="submit" value="Buscar">
-        </form>
+        <button id="crear" onclick="crearObjeto()">Crear Objeto</button>
+    <div id="contenedorIzquierda">
+        <h1 id='nombre'>AMD Ryzen 7 1700 Processor with Wraith Spire LED Cooler</h1>
+        <img src='imgs/ryzen.jpg' class="imagen">
+        <h2>Descripción</h2>
+        <p id="descripcion">AMD's Ryzen1700 combines 8 processor cores and 16 threads with a surprisingly low 65W TDP to deliver an efficient, powerful processing solution like no other. Boasting AMD SenseMI technology with true machine intelligence, the Ryzen 7 1700 also comes equipped with the AMD Wraith Spire cooler, featuring color-configurable LED illumination for customized style. REQUIRES A DISCRETE GRAPHICS CARD, NOT INCLUDED.</p>
+        <p>Características Generales</p>
+        <ul>
+            <li id="marca"><b>Marca: </b>AMD</li>
+            <li id="modelo"><b>Modelo: </b>YD1700BBAEBOX</li>
+            <li id="peso"><b>Peso: </b>1.1 libras</li>
+            <li id="tamano"><b>Tamaño: </b>5.3 x 5.3 x 5.3 pulgadas</li>
+        </ul>
+        <p>Características Específicas</p>
+        <ul id="caracteristicas">
+            <li><b>Velocidad de Procesador: </b>3.7 GHz</li>
+            <li><b>Cantidad de Procesadores: </b>8</li>
+            <li><b>Memoria Cache: </b>4 MB/16 MB (L2/L3)</li>
+            <li><b>Tipo de Socket: </b>AM4</li>
+        </ul>
+        
+    </div>
+    <div id="contenedorDerecha">
+            <textarea rows="50" cols="50" id="output">
+                    
+            </textarea>
+            <a href="producto.html">Ir a producto</a>
     </div>
 </body>
 

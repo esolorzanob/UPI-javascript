@@ -1,38 +1,35 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-         <title>Practica</title>
-        <script src="js/practica2.js"></script>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Practica</title>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/practica.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
 <body>
-<h1 id="titulo">Titulo</h1>
-<form onsubmit="return false;">
-    <label>Nombre</label>
-    <input type="text" id="nombre">
+    <div id="cuadro" class="negro">
+    </div>
+    <br>
+    <input type="text" id="colorText">
     <br>
     <br>
-    <label>Apellidos</label>
-    <input type="text" id="apellidos">
+    <input type="radio" name="color" value="amarillo">Amarillo
+    <input type="radio" name="color" value="azul">Azul
+    <input type="radio" name="color" value="anaranjado">Anaranjado
     <br>
     <br>
-    <label>Direccion</label>
-    <input type="text" id="direccion">
+    <select id="colorSelect">
+        <option value=""></option>
+        <option value="morado">Morado</option>
+        <option value="verde">Verde</option>
+        <option value="negro">Negro</option>
+    </select>
     <br>
     <br>
-    <label>Telefono</label>
-    <input type="text" id="telefono">
-    <br>
-    <br>
-    <label>Email</label>
-    <input type="text" id="email">
-    <br>
-    <br>
-    <button onclick="procesar()">Procesar</button>
-</form>
-   
+    <button onclick="color()">Click me!</button>
 </body>
 
 </html>

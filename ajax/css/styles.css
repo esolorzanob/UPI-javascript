@@ -1,20 +1,20 @@
-#contenedor{
-    margin: 50px;
+
+body{
+    margin-top: 25px;
 }
-#lista li span{
-    font-weight: bold;
-    font-style: italic;
+#contenedorIzquierda{
+    float: left;
+    width: 50%;
+    margin-right: 50px;
+    margin-left: 25px;
 }
-#pokemones{
-    position: absolute;
-    top: 0;
-    right: 0;
+#contenedorDerecha{
+   float: right;
 }
-#principal{
-    margin: 20px;
-    width: 60%;
+.imagen{
+    height: 200px;
+    width: 250px;
 }
-#imagen{
-    height: 150px;
-    width: 150px;
+#output{
+    font-size: 1em;
 }

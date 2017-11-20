@@ -1,0 +1,47 @@
+body{
+   
+    background-image: url(../imgs/fondo.jpg);
+   
+}
+#titulo{
+    background-color: black;
+    text-align: center;
+    padding: 15px 0 15px 0;
+}
+
+#titulo h1{
+    color: white;
+}
+.productosContainer{
+    margin: 25px 0px 50px 150px;
+    display: inline-flex;
+    width: 100%;
+}
+.producto{
+    background-color: white;
+    width: 23%;
+    height: 340px;
+    overflow: auto;
+    margin-right: 50px;
+}
+.productoImageContainer{
+    margin: 20px;
+    border: 1px solid black;
+    height: 160px;
+    text-align: center;
+}
+.nombre{
+    margin: 20px;
+    font-size: 1.4em
+}
+.precio{
+    margin: 20px;
+    font-size: 1.6em;
+    text-align: center;
+}
+.precio span{
+    color: red;
+}
+.imagen{
+    height: 160px;
+}
