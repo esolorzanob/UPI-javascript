@@ -1,4 +1,4 @@
-var productos = localStorage.getItem('productos');
+var productos = sessionStorage.getItem('productos');
 productos = JSON.parse(productos);
 var cont = 0;
 for (var i =0; i < productos.length; i++) {
@@ -15,10 +15,13 @@ for (var i =0; i < productos.length; i++) {
     $(imagen).addClass('imagen');
     imgContainer.append(imagen);
     producto.append(imgContainer);
+    var link = document.createElement('a');
+    $(link).attr('href', 'producto.html?'+productos[i].id);
     var nombre = document.createElement('p');
     $(nombre).addClass('nombre');
     nombre.append(productos[i].nombre);
-    producto.append(nombre);
+    link.append(nombre);
+    producto.append(link);
     var precio = document.createElement('label');
     $(precio).addClass('precio');
     $(precio).html('<i>Precio: </i><span>'+productos[i].precio+'</span>');

@@ -1,0 +1,33 @@
+#masterContainer{
+    margin: 50px 50px 50px 150px;
+}
+.productsContainer{
+    display: inline-flex;
+    width: 100%;
+}
+.producto{
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    width: 23%;
+    height: 350px;
+    font-size: 1.3em;
+}
+.imagenContainer{
+    text-align: center;
+}
+.imagen{
+    width: 70%;
+}
+
+.precio span{
+    color: red;
+}
+
+.producto p{
+    margin-left: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}

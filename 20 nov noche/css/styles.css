@@ -1,0 +1,17 @@
+
+body{
+    margin-top: 25px;
+}
+#contenedorIzquierda{
+    float: left;
+    width: 50%;
+    margin-right: 50px;
+    margin-left: 25px;
+}
+#contenedorDerecha{
+   float: right;
+}
+
+#output{
+    font-size: 1em;
+}
