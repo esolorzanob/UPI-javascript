@@ -1,20 +1,49 @@
 
 body{
-    margin-top: 25px;
-}
-#contenedorIzquierda{
-    float: left;
-    width: 50%;
-    margin-right: 50px;
-    margin-left: 25px;
-}
-#contenedorDerecha{
-   float: right;
+    margin: 25px;
+    text-align: center;
+    font-size: 1.5em;
 }
 .imagen{
-    height: 200px;
-    width: 250px;
+   position: absolute;
+   right: 0;
+   top: 0;
 }
 #output{
     font-size: 1em;
+}
+#contenedor{
+    display: inline-flex;
+}
+#numero{
+    margin-left: 15px;
+    margin-top: 10px;
+    width: 50px;
+    height: 30px;
+    font-size: 1.2em;
+}
+#boton{
+    margin-left: 30px;
+    margin-top: 10px;
+    font-size: 1.1em;
+    height: 60px;
+}
+.grande{
+    font-size: 2em;
+}
+.datosContainer{
+    margin-top: 25px;
+    font-size: 4em;
+}
+input{
+    font-size: 1em;
+}
+.pokeimagen{
+    height: 200px;
+}
+.verde{
+    color:green;
+}
+.rojo{
+    color: red;
 }
