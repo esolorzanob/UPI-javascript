@@ -13,15 +13,19 @@
     </head>
 
 <body>
-    <form id="login" onsubmit="return login()">
-        <label>Usuario</label><input type="text" id="usuario" required>
-        <br>
-        <br>
-        <label>Password</label><input type="password" id="pass" required>
-        <br>
-        <br>
-        <input type="submit" value="Login">
+    <form class="formContainer" id="login" onsubmit="return login()">
+        <div class="form-group">
+            <label for="username">Usuario</label>
+            <input type="text" class="form-control" id="username" placeholder="Usuario">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password">
+          </div>
+        <input class="btn btn-primary" type="submit" value="Login">
+        <a href="registroUsuario.html">Si no tiene cuenta, regístrese aquí</a>
     </form>
+    
     <p id="mensaje"></p>
 </body>
 
