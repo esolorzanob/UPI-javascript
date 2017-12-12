@@ -23,3 +23,32 @@ function registroUsuario() {
     });
     return false;
 }
+
+function login() {
+    var usuario = {
+        username: $('#username').val(),
+        password: $('#password').val(),
+        metodo: "login"
+    };
+    $.ajax({
+        url: "../php/usuario.php",
+        data: usuario,
+        method: 'POST',
+        error: function (xhr) {
+            alert("An error occured: " + xhr.status + " " + xhr.statusText);
+        },
+        success: function (respuesta) {
+            if (respuesta == "Error") {
+                $('#mensaje').text('usuario incorrecto');
+            } else {
+                var usuarioGuardado = JSON.parse(respuesta);
+                if (usuarioGuardado.password == usuario.password) {
+                    $('#mensaje').text('Exito');
+                } else {
+                    $('#mensaje').text('contraseña incorrecta');
+                }
+            }
+        }
+    });
+    return false;
+}

@@ -6,7 +6,15 @@ $dbname = "test";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 if($_POST["metodo"] == "login" || $_POST["metodo"] == "listar"){
-    echo "test";
+    if($_POST["metodo"] == "login"){
+        $sql = "select * from usuarios where username = '".$_POST["username"]."'";
+        $result = $conn->query($sql);
+        if($result->num_rows > 0){
+            echo json_encode(mysqli_fetch_assoc($result));
+        }else{
+            echo "Error";
+        }
+    }
 }else{
     if($_POST["metodo"] == "registro"){
         $sql = "insert into usuarios (nombre, apellidos, correo, telefono, 
