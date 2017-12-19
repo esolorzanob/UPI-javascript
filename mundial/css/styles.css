@@ -1,6 +1,6 @@
 #fondo{
     position: fixed;
-    top: 70px;
+    top: 0;
     left: 0;
     z-index: -1;
     opacity: 0.3;
@@ -55,4 +55,39 @@
 }
 .loading{
     margin-left: 35%;
+}
+#menuContainer{
+    text-align: center;
+}
+#menuContainer label{
+    cursor: pointer;
+    margin-right: 30px;
+    font-size: 1.5em;
+}
+.marcador{
+    border: 1px solid black;
+}
+#partidosContainer{
+    text-align: center;
+    
+}
+.banderaPeq{
+    width: 100px;
+    height: 60px;
+}
+.partido{
+    margin-bottom: 25px;
+    
+}
+#partidosContainer input{
+    font-size: 1em;
+    width: 30px;
+    
+}
+.partido label{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    
 }

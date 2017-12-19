@@ -25,6 +25,18 @@ if($_POST["metodo"] == "select"){
     }else{
         echo "Error";
     }
+}else if($_POST["metodo"] == "selectAll"){
+    $sql = "select * from paises";
+    $paises = array();
+    $result = $conn->query($sql);
+    if($result->num_rows > 0){
+        while($row = mysqli_fetch_assoc($result)){
+            array_push($paises, $row);
+        }
+        echo json_encode($paises);
+    }else{
+        echo "Error";
+    }
 }
 $conn->close();
 ?>
